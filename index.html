@@ -25,8 +25,30 @@
     <link rel="alternate" hreflang="fr" href="/smrenovation/" />
     <link rel="alternate" hreflang="nl" href="/nl" />
     <link rel="alternate" hreflang="de" href="/de" />
-    <script type="module" crossorigin src="/smrenovation/assets/index-DO0xEhsZ.js"></script>
-    <link rel="stylesheet" crossorigin href="/smrenovation/assets/index-Do8_8lBR.css">
+
+    <!-- Préchargement des images critiques -->
+    <link rel="preload" as="image" href="/smrenovation/images/Toit-2-propre.webp" />
+    <link rel="preload" as="image" href="/smrenovation/images/facade-1-propre.webp" />
+
+    <!-- Préchargement des premières images de carrousel -->
+    <link rel="preload" as="image" href="/smrenovation/images/Toit-1-sal.webp" />
+    <link rel="preload" as="image" href="/smrenovation/images/Toit-1-propre.webp" />
+    <link rel="preload" as="image" href="/smrenovation/images/facade-1-sal.webp" />
+    <link rel="preload" as="image" href="/smrenovation/images/facade-1-propre.webp" />
+
+    <!-- Script de détection pour mobile -->
+    <script>
+      // Ajuster les chemins pour GitHub Pages en production
+      if (window.location.hostname !== "localhost") {
+        document.querySelectorAll('link[rel="preload"]').forEach((link) => {
+          if (link.href.includes("/images/")) {
+            link.href = link.href.replace("/images/", "/smrenovation/images/");
+          }
+        });
+      }
+    </script>
+    <script type="module" crossorigin src="/smrenovation/assets/index-DpbO1qQd.js"></script>
+    <link rel="stylesheet" crossorigin href="/smrenovation/assets/index-Dk3eJSos.css">
   </head>
   <body>
     <div id="root"></div>
