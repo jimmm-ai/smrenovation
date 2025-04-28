@@ -1,4 +1,6 @@
 import { Phone } from "lucide-react";
+import { getAssetPath } from "../utils";
+import { useState, useEffect } from "react";
 
 interface CTASectionProps {
   title: string;
@@ -15,17 +17,35 @@ export default function CTASection({
   freeQuoteText,
   backgroundImage = "/images/facade-1-propre.webp",
 }: CTASectionProps) {
+  // Convert the backgroundImage path
+  const processedBackgroundImage = getAssetPath(backgroundImage);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  // Précharger l'image d'arrière-plan
+  useEffect(() => {
+    const img = new Image();
+    img.src = processedBackgroundImage;
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+    return () => {
+      img.onload = null;
+    };
+  }, [processedBackgroundImage]);
+
   return (
     <div
       id="contact"
       className="bg-blue-900 text-white py-16 md:py-24"
       style={{
-        backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.95)), url('${backgroundImage}')`,
+        backgroundImage: isImageLoaded
+          ? `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('${processedBackgroundImage}')`
+          : "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-3xl mx-auto px-4 text-center">
+      <div className="max-w-3xl md:max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-shadow">
           {title}
         </h2>

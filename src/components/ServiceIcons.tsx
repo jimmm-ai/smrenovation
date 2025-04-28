@@ -1,12 +1,4 @@
-import {
-  Home,
-  Droplets,
-  Hammer,
-  Palette,
-  Building,
-  Wrench,
-  HardHat,
-} from "lucide-react";
+import { Home, Hammer, Palette, Building, Wrench, HardHat } from "lucide-react";
 
 // Utility function to get the appropriate icon for each service
 export function getServiceIcon(
@@ -16,8 +8,6 @@ export function getServiceIcon(
   switch (serviceId) {
     case "renovation-toiture":
       return <Home className={className} />;
-    case "nettoyage-murs":
-      return <Droplets className={className} />;
     case "nettoyage-dallages":
       return <Hammer className={className} />;
     case "peinture-toiture":

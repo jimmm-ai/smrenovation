@@ -35,7 +35,8 @@ function App() {
         subtitle={t.heroSubtitle}
         phoneNumber={phoneNumber}
         freeQuoteText={t.freeQuote}
-        backgroundImage="/images/Toit-2-propre.webp"
+        backgroundImage="/images/avantapresmaison.webp"
+        language={language}
       />
 
       <ServicesSection t={t} phoneNumber={phoneNumber} />

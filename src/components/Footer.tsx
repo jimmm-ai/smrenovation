@@ -1,6 +1,7 @@
-import { Phone, HardHat } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { translations } from "../translations";
 import { Language } from "./Header";
+import { getAssetPath } from "../utils";
 
 type TranslationType = (typeof translations)[Language];
 
@@ -15,21 +16,31 @@ export default function Footer({
   phoneNumber,
   scrollToService,
 }: FooterProps) {
+  const logoPath = getAssetPath("logo/Logo_SMrenovation.svg");
+
   return (
     <footer className="bg-gray-900 text-gray-400 py-10 md:py-12">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl md:max-w-7xl lg:max-w-[1400px] mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-3">
-              <div className="bg-blue-600 text-white p-1.5 rounded-md">
-                <HardHat className="w-5 h-5" />
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+              <div className="bg-white rounded-md p-1.5 h-14 w-14">
+                <img
+                  src={logoPath}
+                  alt={t.companyName}
+                  className="h-full w-full"
+                />
               </div>
-              {t.companyName}
-            </h2>
-            <p className="text-xs text-gray-400 -mt-4 mb-4 text-center md:text-left">
-              De père en fils depuis plus de 35 ans
-            </p>
-            <p className="text-base md:text-lg mb-3">{t.contactUs}</p>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  {t.companyName}
+                </h2>
+                <p className="text-xs text-gray-400 text-left">
+                  {t.companyTagline}
+                </p>
+              </div>
+            </div>
+            <p className="text-base md:text-lg mb-3 mt-4">{t.contactUs}</p>
             <a
               href={`tel:${phoneNumber}`}
               className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-2 justify-center md:justify-start"
@@ -37,9 +48,13 @@ export default function Footer({
               <Phone className="w-4 h-4" />
               <span>{phoneNumber}</span>
             </a>
-            <p className="text-blue-400 hover:text-blue-300 transition-colors mt-2 text-center md:text-left">
-              renovalonso@gmail.com
-            </p>
+            <a
+              href="mailto:renovalonso@gmail.com"
+              className="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-2 justify-center md:justify-start mt-2"
+            >
+              <Mail className="w-4 h-4" />
+              <span>renovalonso@gmail.com</span>
+            </a>
             <div className="mt-4 text-blue-200 font-medium">{t.freeQuote}</div>
           </div>
           <div className="text-center md:text-right">

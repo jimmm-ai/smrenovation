@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Phone, Globe2, HardHat, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, Globe2, Menu, X, ChevronDown } from "lucide-react";
 import { translations } from "../translations";
+import { getAssetPath } from "../utils";
 
 export type Language = keyof typeof translations;
 type TranslationType = (typeof translations)[Language];
@@ -22,6 +23,7 @@ export default function Header({
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+  const logoPath = getAssetPath("logo/Logo_SMrenovation.svg");
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -36,21 +38,29 @@ export default function Header({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-md z-50 transition-all duration-300">
-      <div className="max-w-6xl mx-auto px-4 py-4">
+    <header
+      className="fixed top-5 left-0 right-0 mx-auto bg-white/95 backdrop-blur-sm shadow-xl z-50 transition-all duration-300 rounded-2xl max-w-[95%] md:max-w-[90%] lg:max-w-[85%]"
+      style={{
+        boxShadow:
+          "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+      }}
+    >
+      <div className="max-w-6xl md:max-w-7xl lg:max-w-[1400px] mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-3">
-            <div className="bg-blue-600 text-white p-2.5 rounded-lg shadow-md transform transition-transform hover:scale-105">
-              <HardHat className="w-7 h-7" />
+            <div className="h-12 w-12 transform transition-transform hover:scale-105">
+              <img
+                src={logoPath}
+                alt={t.companyName}
+                className="h-full w-full"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-blue-900 tracking-tight">
                 {t.companyName}
               </h1>
-              <p className="text-xs text-gray-600 -mt-1">
-                De père en fils depuis plus de 35 ans
-              </p>
+              <p className="text-xs text-gray-600 -mt-1">{t.companyTagline}</p>
             </div>
           </div>
 
@@ -62,9 +72,9 @@ export default function Header({
               <div className="relative group">
                 <button
                   className="font-medium text-gray-700 hover:text-blue-700 transition-colors border-b-2 border-transparent hover:border-blue-600 pb-1 flex items-center gap-1 px-1"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     toggleServicesDropdown();
-                    scrollToService("renovation-toiture");
                   }}
                   onMouseEnter={() => setShowServicesDropdown(true)}
                   onMouseLeave={() => setShowServicesDropdown(false)}
@@ -146,8 +156,8 @@ export default function Header({
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 animate-fade-in">
-          <div className="max-w-6xl mx-auto px-4 py-4">
+        <div className="lg:hidden bg-white border-t border-gray-100 animate-fade-in rounded-b-2xl overflow-hidden">
+          <div className="max-w-6xl md:max-w-7xl mx-auto px-4 py-4">
             <nav className="flex flex-col gap-4 mb-6">
               <div className="py-2 font-semibold text-gray-800 border-b border-gray-100 mb-2">
                 {t.servicesTitle}

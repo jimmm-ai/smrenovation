@@ -2,13 +2,18 @@ export const translations = {
   fr: {
     language: "Français",
     companyName: "SM Renovation",
-    heroTitle: "Expert en Rénovation de Toiture et Façade",
+    companyTagline: "De père en fils depuis plus de 35 ans",
+    heroTitle: "Rénovation Toiture, Façade et Extérieur",
     heroSubtitle:
-      "Votre spécialiste multiservice pour tous vos travaux de rénovation, nettoyage et traitement avec plus de 35 ans d'expérience de père en fils",
+      "Plus de 35 ans d'expertise en nettoyage et peinture de toiture, ravalement de façade, rénovation de murs, dallages et boiseries. Devis gratuit et intervention dans toute la région.",
     phoneLabel: "Devis Gratuit",
     phoneNumber: "0465 23 87 20",
     freeQuote: "Devis et déplacement gratuit",
     servicesTitle: "Nos Services",
+    servicesSubtitle: "Découvrez nos services de rénovation professionnels",
+    customServiceTitle: "Besoin d'un service personnalisé?",
+    customServiceText:
+      "Nous sommes là pour répondre à toutes vos questions. Devis et déplacement gratuit.",
     serviceGroupTitles: {
       toiture: "Travaux de Toiture",
       murs: "Murs et Façades",
@@ -24,77 +29,59 @@ export const translations = {
     services: [
       // --- TOITURE ---
       {
-        title: "Rénovation de Toiture",
+        title: "Rénovation de toiture",
         description:
-          "Nettoyage spécial BIO (98%), élimination en profondeur de la mousse et du lichen, application d'un hydrofuge incolore pour protéger durablement votre toiture",
+          "Rénovation complète de toiture avec nettoyage, traitement, réparation et embellissement avec garantie 10 ans",
         id: "renovation-toiture",
         bulletPoints: [
           "Diagnostic complet de l'état de la toiture",
-          "Remplacement des tuiles/ardoises endommagées",
-          "Traitement anti-mousse longue durée",
-          "Application d'hydrofuge protecteur",
-        ],
-      },
-      {
-        title: "Peinture de Toiture",
-        description:
-          "Application d'une peinture spéciale hydrofuge et colorée pour toiture, réalisée au pistolet airless. Convient à tous types de tuiles et d'ardoises",
-        id: "peinture-toiture",
-        bulletPoints: [
-          "Préparation et nettoyage de la surface",
-          "Application de primaire d'accrochage si nécessaire",
-          "Peinture spéciale toiture haute résistance",
-          "Large choix de couleurs",
+          "Nettoyage en profondeur et traitement anti-mousse longue durée",
+          "Remplacement des tuiles/ardoises cassées (tous types de tuiles)",
+          "Application d'un hydrofuge protecteur",
+          "Peinture spéciale haute résistance (large choix de couleurs)",
+          "Rénovation complète esthétique et fonctionnelle",
         ],
       },
       // --- MURS / FAÇADE ---
       {
-        title: "Nettoyage des Murs",
+        title: "Ravalement de façade",
         description:
-          "Application d'un traitement curatif et préventif par pulvérisation, application d'un hydrofuge après nettoyage pour prévenir l'apparition de mousse",
-        id: "nettoyage-murs",
-        bulletPoints: [
-          "Élimination des traces noires, rouges et vertes",
-          "Traitement fongicide et algicide",
-          "Hydrofugation pour protection contre l'humidité",
-          "Respect des matériaux de façade",
-        ],
-      },
-      {
-        title: "Ravalement de Façade",
-        description:
-          "Décapage haute pression sur l'ensemble de la façade, réparation des fissures ou travaux de rejointoiement",
+          "Restauration complète de l'aspect extérieur de votre maison",
         id: "ravalement-facade",
         bulletPoints: [
           "Nettoyage et décapage de la façade",
           "Réparation des fissures et imperfections",
           "Application d'enduits et finitions",
-          "Protection hydrofuge et anti-pollution",
+          "Protection hydrofuge et anti-salissures",
         ],
       },
       {
-        title: "Rénovation des Murs",
+        title: "Rénovation et nettoyage de mur",
         description:
-          "Réparation des murs dégradés, reprise des fissures, mise en peinture",
+          "Réparation, nettoyage et rénovation complète des murs intérieurs et extérieurs avec traitement anti-mousse",
         id: "renovation-mur",
         bulletPoints: [
-          "Diagnostic des problèmes (humidité, fissures)",
+          "Diagnostic des problèmes (humidité, fissures, mousses)",
+          "Nettoyage et traitement anti-mousse des surfaces",
+          "Élimination des traces noires, rouges et vertes",
+          "Application d'hydrofuge pour protection contre l'humidité",
           "Assainissement et réparation des supports",
-          "Application d'enduits de lissage ou décoratifs",
+          "Application d'enduits lissants ou décoratifs",
           "Mise en peinture ou pose de revêtements",
         ],
       },
       // --- DALLAGES / SOLS ---
       {
-        title: "Nettoyage Dallages et Carrelages",
+        title: "Nettoyages dallages, carrelages et terrasses",
         description:
           "Décapage contre la mousse et les mauvaises herbes, application d'un traitement anti-mousse pour une protection durable. Rénovation des joints pour une finition parfaite.",
         id: "nettoyage-dallages",
         bulletPoints: [
-          "Rénovation et rejointoiement",
-          "Nettoyage haute pression adapté",
-          "Traitement anti-mousse préventif",
-          "Application d'un produit hydrofuge",
+          "Décapage haute pression adapté",
+          "Élimination de la mousse et des herbes",
+          "Rejointoiement des dalles ou carrelages",
+          "Coulage de dalles en ciment",
+          "Traitement anti-mousse et hydrofuge",
         ],
       },
       // --- BOISERIES ---
@@ -120,13 +107,19 @@ export const translations = {
   },
   nl: {
     language: "Nederlands",
-    companyName: "Dak Pro Express",
-    heroTitle: "Expert in Dakrenovatie",
-    heroSubtitle: "Meer dan 20 jaar ervaring in dakrenovatie en reparatie",
+    companyName: "SM Renovatie",
+    companyTagline: "Vader op zoon al meer dan 35 jaar",
+    heroTitle: "Dakrenovatie, Gevelrenovatie & Buitenrenovatie",
+    heroSubtitle:
+      "Meer dan 35 jaar vakmanschap in dakreiniging en -schilderwerk, gevelrenovatie, muurvernieuwing, bestrating en houtrenovatie. Gratis offerte en service in de hele regio.",
     phoneLabel: "Gratis Offerte",
     phoneNumber: "0465 23 87 20",
     freeQuote: "Gratis offerte en verplaatsing",
     servicesTitle: "Onze Diensten",
+    servicesSubtitle: "Ontdek onze professionele renovatiediensten",
+    customServiceTitle: "Heeft u een aangepaste service nodig?",
+    customServiceText:
+      "Wij zijn er om al uw vragen te beantwoorden. Gratis offerte en verplaatsing.",
     serviceGroupTitles: {
       toiture: "Dakwerken",
       murs: "Muren en Gevels",
@@ -143,39 +136,19 @@ export const translations = {
       // --- TOITURE ---
       {
         title: "Dakrenovatie",
-        description: "Totale dakrenovatie met 10 jaar garantie",
+        description:
+          "Totale dakrenovatie inclusief reiniging, behandeling, reparatie en verfraaiing met 10 jaar garantie",
         id: "renovation-toiture",
         bulletPoints: [
           "Volledige diagnose van de dakstaat",
-          "Vervanging van beschadigde dakpannen/leien",
-          "Langdurige anti-mos behandeling",
+          "Grondige reiniging en langdurige anti-mos behandeling",
+          "Vervanging van beschadigde dakpannen/leien (alle soorten dakpannen)",
           "Aanbrengen van beschermende hydrofuge",
-        ],
-      },
-      {
-        title: "Dakverfwerken",
-        description: "Bescherming en esthetische renovatie van uw dak",
-        id: "peinture-toiture",
-        bulletPoints: [
-          "Voorbereiding en reiniging van het oppervlak",
-          "Aanbrengen van hechtprimer indien nodig",
-          "Speciale dakverf met hoge weerstand",
-          "Brede kleurkeuze",
+          "Speciale dakverf met hoge weerstand (brede kleurkeuze)",
+          "Complete esthetische en functionele renovatie",
         ],
       },
       // --- MURS / FAÇADE ---
-      {
-        title: "Muurreiniging",
-        description:
-          "Verwijdering van vuil en herstel van de glans van uw muren",
-        id: "nettoyage-murs",
-        bulletPoints: [
-          "Verwijdering van zwarte, rode en groene sporen",
-          "Fungicide en algicide behandeling",
-          "Hydrofuge voor bescherming tegen vocht",
-          "Respect voor gevelmaterialen",
-        ],
-      },
       {
         title: "Gevelrenovatie",
         description: "Volledige restauratie van het uiterlijk van uw huis",
@@ -188,11 +161,15 @@ export const translations = {
         ],
       },
       {
-        title: "Muurrenovatie",
-        description: "Reparatie en renovatie van binnen- en buitenmuren",
+        title: "Muurrenovatie en -reiniging",
+        description:
+          "Reparatie, reiniging en volledige renovatie van binnen- en buitenmuren met anti-mosbehandeling",
         id: "renovation-mur",
         bulletPoints: [
-          "Diagnose van problemen (vocht, scheuren)",
+          "Diagnose van problemen (vocht, scheuren, mos)",
+          "Reiniging en anti-mosbehandeling van oppervlakken",
+          "Verwijdering van zwarte, rode en groene sporen",
+          "Hydrofuge voor bescherming tegen vocht",
           "Sanering en reparatie van ondergronden",
           "Aanbrengen van gladmakende of decoratieve pleisters",
           "Schilderen of aanbrengen van bekledingen",
@@ -200,15 +177,16 @@ export const translations = {
       },
       // --- DALLAGES / SOLS ---
       {
-        title: "Tegel- en Bestratingsreiniging",
+        title: "Tegel-, Bestratings- en Terrasreiniging",
         description:
           "Grondige reiniging van alle soorten buitentegels en bestrating, inclusief voegrenovatie.",
         id: "nettoyage-dallages",
         bulletPoints: [
-          "Voegrenovatie en hervoegen",
           "Aangepaste hogedrukreiniging",
-          "Preventieve anti-mos behandeling",
-          "Aanbrengen van een waterafstotend product",
+          "Verwijdering van mos en onkruid",
+          "Hervoegen van tegels of vloeren",
+          "Gieten van betontegels",
+          "Anti-mos behandeling en waterdichte coating",
         ],
       },
       // --- BOISERIES ---
@@ -233,13 +211,20 @@ export const translations = {
   },
   de: {
     language: "Deutsch",
-    companyName: "Dach Pro Express",
-    heroTitle: "Experte für Dachsanierung",
-    heroSubtitle: "Über 20 Jahre Erfahrung in Dachsanierung und Reparatur",
+    companyName: "SM Renovierung",
+    companyTagline: "Von Vater zu Sohn seit mehr als 35 Jahren",
+    heroTitle: "Dachsanierung, Fassadenrenovierung & Außenbereichserneuerung",
+    heroSubtitle:
+      "Über 35 Jahre Erfahrung in Dachreinigung und -anstrich, Fassadensanierung, Wandrenovierung, Pflasterreinigung und Holzarbeiten. Kostenlose Angebote und Service in der gesamten Region.",
     phoneLabel: "Kostenloser Kostenvoranschlag",
     phoneNumber: "0465 23 87 20",
     freeQuote: "Kostenlose Angebote und Besuche",
     servicesTitle: "Unsere Leistungen",
+    servicesSubtitle:
+      "Entdecken Sie unsere professionellen Renovierungsdienste",
+    customServiceTitle: "Benötigen Sie einen maßgeschneiderten Service?",
+    customServiceText:
+      "Wir sind hier, um all Ihre Fragen zu beantworten. Kostenlose Angebote und Besuche.",
     serviceGroupTitles: {
       toiture: "Dacharbeiten",
       murs: "Wände und Fassaden",
@@ -256,39 +241,19 @@ export const translations = {
       // --- TOITURE ---
       {
         title: "Dachsanierung",
-        description: "Vollständige Dachsanierung mit 10 Jahren Garantie",
+        description:
+          "Komplette Dachsanierung mit Reinigung, Behandlung, Reparatur und Verschönerung mit 10 Jahren Garantie",
         id: "renovation-toiture",
         bulletPoints: [
           "Vollständige Diagnose des Dachzustands",
-          "Austausch beschädigter Ziegel/Schiefer",
-          "Langfristige Anti-Moos-Behandlung",
+          "Gründliche Reinigung und langfristige Anti-Moos-Behandlung",
+          "Austausch beschädigter Dachziegel/Schiefer (alle Arten von Dachziegeln)",
           "Auftragen eines schützenden Hydrophobierungsmittels",
-        ],
-      },
-      {
-        title: "Dachbeschichtung",
-        description: "Schutz und ästhetische Renovierung Ihres Daches",
-        id: "peinture-toiture",
-        bulletPoints: [
-          "Vorbereitung und Reinigung der Oberfläche",
-          "Auftragen einer Haftgrundierung bei Bedarf",
-          "Spezielle hochbeständige Dachfarbe",
-          "Große Farbauswahl",
+          "Spezielle hochbeständige Dachfarbe (große Farbauswahl)",
+          "Komplette ästhetische und funktionale Renovierung",
         ],
       },
       // --- MURS / FAÇADE ---
-      {
-        title: "Wandreinigung",
-        description:
-          "Schmutzentfernung und Wiederherstellung des Glanzes Ihrer Wände",
-        id: "nettoyage-murs",
-        bulletPoints: [
-          "Entfernung von schwarzen, roten und grünen Spuren",
-          "Fungizid- und Algizidbehandlung",
-          "Hydrophobierung zum Schutz vor Feuchtigkeit",
-          "Respekt vor Fassadenmaterialien",
-        ],
-      },
       {
         title: "Fassadensanierung",
         description:
@@ -302,27 +267,32 @@ export const translations = {
         ],
       },
       {
-        title: "Wandrenovierung",
-        description: "Reparatur und Renovierung von Innen- und Außenwänden",
+        title: "Wandrenovierung und -reinigung",
+        description:
+          "Reparatur, Reinigung und komplette Renovierung von Innen- und Außenwänden mit Anti-Moos-Behandlung",
         id: "renovation-mur",
         bulletPoints: [
-          "Diagnose von Problemen (Feuchtigkeit, Risse)",
-          "Sanierung und Reparatur der Untergründe",
-          "Auftragen von Glättungs- oder Dekorputzen",
-          "Anstrich oder Anbringung von Verkleidungen",
+          "Diagnose von Problemen (Feuchtigkeit, Risse, Moos)",
+          "Reinigung und Anti-Moos-Behandlung der Oberflächen",
+          "Entfernung von schwarzen, roten und grünen Spuren",
+          "Hydrophobierung zum Schutz vor Feuchtigkeit",
+          "Sanierung und Reparatur von Untergründen",
+          "Auftragen von glättenden oder dekorativen Putzen",
+          "Anstrich oder Anbringen von Verkleidungen",
         ],
       },
       // --- DALLAGES / SOLS ---
       {
-        title: "Pflaster- und Fliesenreinigung",
+        title: "Pflaster-, Fliesen- und Terrassenreinigung",
         description:
           "Gründliche Reinigung aller Arten von Außenpflastern und Fliesen, einschließlich Fugenrenovierung.",
         id: "nettoyage-dallages",
         bulletPoints: [
-          "Fugenrenovierung und Neuverfugung",
           "Angepasste Hochdruckreinigung",
-          "Vorbeugende Anti-Moos-Behandlung",
-          "Auftragen eines wasserabweisenden Produkts",
+          "Entfernung von Moos und Unkraut",
+          "Neuverfugung von Fliesen oder Pflastersteinen",
+          "Verlegung von Zementplatten",
+          "Anti-Moos-Behandlung und Hydrophobierung",
         ],
       },
       // --- BOISERIES ---
