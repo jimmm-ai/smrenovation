@@ -42,7 +42,8 @@
       if (window.location.hostname !== "localhost") {
         document.querySelectorAll('link[rel="preload"]').forEach((link) => {
           if (link.href.includes("/images/")) {
-            link.href = link.href.replace("/images/", "/smrenovation/images/");
+            // Remove this problematic line
+            // link.href = link.href.replace("/images/", "/smrenovation/images/");
           }
         });
       }
