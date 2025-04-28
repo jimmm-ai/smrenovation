@@ -36,8 +36,18 @@
     <link rel="preload" as="image" href="/images/facade-1-sal.webp" />
     <link rel="preload" as="image" href="/images/facade-1-propre.webp" />
 
-    <!-- Script de détection supprimé - Les chemins sont déjà corrects avec la configuration Vite -->
-    <script type="module" crossorigin src="/assets/index-BxPN48bt.js"></script>
+    <!-- Script de détection pour mobile -->
+    <script>
+      // Ajuster les chemins pour GitHub Pages en production
+      if (window.location.hostname !== "localhost") {
+        document.querySelectorAll('link[rel="preload"]').forEach((link) => {
+          if (link.href.includes("/images/")) {
+            link.href = link.href.replace("/images/", "/smrenovation/images/");
+          }
+        });
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-Cg5V9_Ar.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-r3UVaTSQ.css">
   </head>
   <body>
